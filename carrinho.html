@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>Carrinho | USEGET Loja</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="loja.css" />
+    <script src="loja.js" defer></script>
+  </head>
+  <body data-page="carrinho">
+    <main>
+      <div class="container page-head">
+        <h1>Seu carrinho.</h1>
+        <p>2 placas · entrega para todo o Brasil</p>
+      </div>
+
+      <section class="cart-page">
+        <div class="container cart-layout">
+          <div>
+            <div class="ship-progress">
+              <p>Faltam <strong>R$ 79,20</strong> para você ganhar <strong>frete grátis</strong>.</p>
+              <div class="ship-bar"><span style="width:60%"></span></div>
+            </div>
+
+            <ul class="cart-list">
+              <li class="cart-item">
+                <img src="assets/images/produtos/placa-google-azul-600.webp" width="1143" height="846" alt="Placa Avaliação no Google azul" />
+                <div>
+                  <h3>Avaliação no Google</h3>
+                  <p class="item-meta">Cor: Azul · Chega pronta (g.page/r/seu-negocio)</p>
+                  <div class="item-controls">
+                    <div class="qty"><button type="button" aria-label="Menos"><svg><use href="#icon-minus"></use></svg></button><span>1</span><button type="button" aria-label="Mais"><svg><use href="#icon-plus"></use></svg></button></div>
+                    <button class="remove-link" type="button"><svg aria-hidden="true"><use href="#icon-trash"></use></svg>Remover</button>
+                  </div>
+                </div>
+                <div class="item-price"><strong>R$ 59,90</strong><span>R$ 53,91 no Pix</span></div>
+              </li>
+              <li class="cart-item">
+                <img src="assets/images/produtos/placa-instagram-600.webp" width="1143" height="846" alt="Placa Instagram" />
+                <div>
+                  <h3>Instagram</h3>
+                  <p class="item-meta">Cor: Padrão · Eu mesmo ativo</p>
+                  <div class="item-controls">
+                    <div class="qty"><button type="button" aria-label="Menos"><svg><use href="#icon-minus"></use></svg></button><span>1</span><button type="button" aria-label="Mais"><svg><use href="#icon-plus"></use></svg></button></div>
+                    <button class="remove-link" type="button"><svg aria-hidden="true"><use href="#icon-trash"></use></svg>Remover</button>
+                  </div>
+                </div>
+                <div class="item-price"><strong>R$ 59,90</strong><span>R$ 53,91 no Pix</span></div>
+              </li>
+            </ul>
+
+            <div class="upsell">
+              <img src="assets/images/produtos/placa-whatsapp-600.webp" width="1143" height="846" alt="" />
+              <div><strong>Transforme em Kit Balcão</strong><span>Adicione a placa WhatsApp e pague R$ 149,90 nas três.</span></div>
+              <button class="button button-outline" type="button">Adicionar + R$ 30,00</button>
+            </div>
+
+            <p style="margin-top:28px"><a class="text-link" href="index.html#placas"><svg class="icon" aria-hidden="true"><use href="#icon-back"></use></svg>Continuar comprando</a></p>
+          </div>
+
+          <aside class="summary" aria-label="Resumo do pedido">
+            <h2>Resumo</h2>
+            <div class="sum-row"><span>Subtotal (2 itens)</span><strong>R$ 119,80</strong></div>
+            <div class="sum-row"><span>Frete · PAC (CEP 87013-000)</span><strong>R$ 14,90</strong></div>
+            <div class="sum-row is-discount"><span>Desconto Pix (10%)</span><strong>− R$ 11,98</strong></div>
+            <div class="coupon">
+              <input type="text" placeholder="Cupom de desconto" aria-label="Cupom de desconto" />
+              <button type="button">Aplicar</button>
+            </div>
+            <div class="sum-total">
+              <div class="sum-row"><span>Total no Pix</span><strong>R$ 122,72</strong></div>
+              <p class="sum-pix" style="color:var(--secondary)">ou R$ 134,70 em até 3× de R$ 44,90</p>
+            </div>
+            <a class="button button-primary button-block" href="checkout.html">Finalizar compra</a>
+            <p class="summary-safe"><svg aria-hidden="true"><use href="#icon-lock"></use></svg>Pagamento seguro</p>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

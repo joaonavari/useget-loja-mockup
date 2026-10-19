@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#f5f5f7" />
+    <title>Finalizar compra | USEGET Loja</title>
+    <link rel="icon" href="favicon.ico" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="loja.css" />
+    <script src="loja.js" defer></script>
+  </head>
+  <body data-page="checkout">
+    <main class="checkout-page">
+      <div class="container">
+        <div class="steps-bar" aria-label="Etapas da compra">
+          <span class="step-pill is-done"><b><svg aria-hidden="true"><use href="#icon-check"></use></svg></b><span>Carrinho</span></span>
+          <span class="step-sep"></span>
+          <span class="step-pill is-done"><b><svg aria-hidden="true"><use href="#icon-check"></use></svg></b><span>Identificação</span></span>
+          <span class="step-sep"></span>
+          <span class="step-pill is-current"><b>3</b><span>Entrega e pagamento</span></span>
+          <span class="step-sep"></span>
+          <span class="step-pill"><b>4</b><span>Confirmação</span></span>
+        </div>
+
+        <div class="checkout-layout">
+          <div class="checkout-forms">
+            <!-- Identificação (concluída) -->
+            <section class="co-block">
+              <div class="co-block-head"><h2>Identificação</h2><a href="#">Alterar</a></div>
+              <p class="co-done"><svg aria-hidden="true"><use href="#icon-check"></use></svg><span><strong>Café Central</strong> · contato@seunegocio.com.br · (00) 00000-0000</span></p>
+            </section>
+
+            <!-- Entrega -->
+            <section class="co-block">
+              <div class="co-block-head"><h2>Entrega</h2></div>
+              <div class="form-grid">
+                <div class="field col-2"><label for="cep">CEP</label><input id="cep" value="87013-000" /></div>
+                <div class="field col-4"><label for="rua">Endereço</label><input id="rua" placeholder="Rua, avenida…" value="Av. Exemplo" /></div>
+                <div class="field col-2"><label for="num">Número</label><input id="num" placeholder="123" value="1000" /></div>
+                <div class="field col-4"><label for="comp">Complemento</label><input id="comp" placeholder="Sala, loja, bloco (opcional)" /></div>
+                <div class="field col-3"><label for="bairro">Bairro</label><input id="bairro" value="Centro" /></div>
+                <div class="field col-3"><label for="cidade">Cidade / UF</label><input id="cidade" value="Sua cidade / UF" /></div>
+              </div>
+              <div class="ship-options" data-choice="ship">
+                <div class="ship-option is-selected" data-option><span class="radio"></span><div><strong>PAC</strong><span>5 a 8 dias úteis</span></div><em>R$ 14,90</em></div>
+                <div class="ship-option" data-option><span class="radio"></span><div><strong>SEDEX</strong><span>2 a 3 dias úteis</span></div><em>R$ 24,90</em></div>
+                <div class="ship-option" data-option><span class="radio"></span><div><strong>Retirar na loja</strong><span>Disponível a partir de amanhã</span></div><em class="is-free">Grátis</em></div>
+              </div>
+            </section>
+
+            <!-- Pagamento -->
+            <section class="co-block">
+              <div class="co-block-head"><h2>Pagamento</h2></div>
+              <div class="pay-tabs" data-choice="pay">
+                <button class="pay-tab is-selected" type="button" data-option="pix"><svg aria-hidden="true"><use href="#icon-pix"></use></svg>Pix<small>10% off</small></button>
+                <button class="pay-tab" type="button" data-option="cartao"><svg aria-hidden="true"><use href="#icon-card"></use></svg>Cartão<small>3× sem juros</small></button>
+                <button class="pay-tab" type="button" data-option="boleto"><svg aria-hidden="true"><use href="#icon-barcode"></use></svg>Boleto<small>&nbsp;</small></button>
+              </div>
+
+              <div class="pay-panel" data-pay-panel="pix">
+                <div class="pix-box">
+                  <div class="fake-qr" aria-hidden="true"><i></i></div>
+                  <div>
+                    <p>O QR Code do Pix aparece ao confirmar o pedido. Você paga <strong>R$ 122,72</strong> e economiza <strong>R$ 11,98</strong>.</p>
+                    <ul><li>Aprovação imediata</li><li>Produção começa no mesmo dia</li><li>Código válido por 30 minutos</li></ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pay-panel" data-pay-panel="cartao" hidden>
+                <div class="card-preview" aria-hidden="true">
+                  <div class="chip"></div>
+                  <p>•••• •••• •••• ••••</p>
+                  <div><span>Nome no cartão</span><span>MM/AA</span></div>
+                </div>
+                <div class="form-grid">
+                  <div class="field col-6"><label for="cc">Número do cartão</label><input id="cc" placeholder="0000 0000 0000 0000" /></div>
+                  <div class="field col-6"><label for="ccname">Nome impresso</label><input id="ccname" placeholder="Como está no cartão" /></div>
+                  <div class="field col-2"><label for="ccval">Validade</label><input id="ccval" placeholder="MM/AA" /></div>
+                  <div class="field col-2"><label for="cvv">CVV</label><input id="cvv" placeholder="123" /></div>
+                  <div class="field col-2"><label for="parc">Parcelas</label><select id="parc"><option>1× R$ 134,70</option><option>2× R$ 67,35</option><option selected>3× R$ 44,90</option></select></div>
+                </div>
+              </div>
+
+              <div class="pay-panel" data-pay-panel="boleto" hidden>
+                <div class="pix-box">
+                  <svg style="width:56px;height:56px" aria-hidden="true"><use href="#icon-barcode"></use></svg>
+                  <div><p>O boleto de <strong>R$ 134,70</strong> é gerado ao confirmar o pedido e vence em 3 dias úteis.</p>
+                    <ul><li>Compensação em até 2 dias úteis</li><li>A produção começa após a compensação</li></ul></div>
+                </div>
+              </div>
+            </section>
+          </div>
+
+          <!-- Resumo -->
+          <aside class="summary checkout-summary" aria-label="Resumo do pedido">
+            <h2>Seu pedido</h2>
+            <div class="mini-item">
+              <img src="assets/images/produtos/placa-google-azul-600.webp" width="1143" height="846" alt="" />
+              <div><p class="mini-name">Avaliação no Google</p><p class="mini-meta">Azul · Chega pronta · 1 un.</p></div>
+              <p class="mini-price">R$ 59,90</p>
+            </div>
+            <div class="mini-item">
+              <img src="assets/images/produtos/placa-instagram-600.webp" width="1143" height="846" alt="" />
+              <div><p class="mini-name">Instagram</p><p class="mini-meta">Eu mesmo ativo · 1 un.</p></div>
+              <p class="mini-price">R$ 59,90</p>
+            </div>
+            <div style="margin-top:12px">
+              <div class="sum-row"><span>Subtotal</span><strong>R$ 119,80</strong></div>
+              <div class="sum-row"><span>Frete (PAC)</span><strong>R$ 14,90</strong></div>
+              <div class="sum-row is-discount"><span>Desconto Pix</span><strong>− R$ 11,98</strong></div>
+            </div>
+            <div class="sum-total"><div class="sum-row"><span>Total</span><strong>R$ 122,72</strong></div></div>
+            <a class="button button-primary button-block" href="confirmado.html"><svg class="icon" aria-hidden="true"><use href="#icon-lock"></use></svg>Confirmar pedido</a>
+            <p class="summary-safe"><svg aria-hidden="true"><use href="#icon-shield"></use></svg>Seus dados estão protegidos</p>
+          </aside>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
